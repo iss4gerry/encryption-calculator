@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symmetric Encryption</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+</head>
+
+<body>
+
+    <!-- <div class="form-toggle">
+        <button type="button" id="symmetric-toggle" class="sym-button">Symmetric</button>
+        <button type="button" id="asymmetric-toggle" class="asym-button">Asymmetric</button>
+    </div> -->
+
+    <div class="form-symmetric" id="sym-form">
+        <div class="encrypt">
+            <form id="form-symmetric-encrypt">
+                <input type="text" id="plaintext" placeholder="TEXT">
+                <span class="error-message" id="symm-key-error">Minimum 32 characters</span>
+                <input type="text" id="key" placeholder="KEY">
+                <button type="button" id="generate-key">Random Key</button>
+                <span class="error-message" id="symm-iv-error">Minimum 16 characters</span>
+                <input type="text" id="iv" placeholder="IV">
+                <button type="button" id="generate-iv">Random IV</button>
+                <h1 class="text-encrypted-output">Encrypted Output</h1>
+                <textarea placeholder="" id="encrypted-textarea"></textarea>
+                <button type="submit">Encrypt</button>
+            </form>
+        </div>
+
+        <div class="decrypt">
+            <form id="form-symmetric-decrypt">
+                <input type="text" id="decrypted-text" placeholder="ENCRYPTED TEXT">
+                <span class="error-message" id="dec-key-error">Minimum 32 characters</span>
+                <input type="text" id="decrypted-key" placeholder="KEY">
+                <button type="button" class="button-invisible">Random Key</button>
+                <span class="error-message" id="dec-iv-error">Minimum 16 characters</span>
+                <input type="text" id="decrypted-iv" placeholder="IV">
+                <button type="button" class="button-invisible">Random IV</button>
+                <h1 class="text-encrypted-output">Decrypted Output</h1>
+                <textarea id="decrypted-textarea" placeholder=""></textarea>
+                <button type="submit">Decrypt</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- <div class="form-asymmetric" id="asym-encrypt-form">
+        <div>
+            <div class="keypair-textarea">
+                <div class="public-key">
+                    <textarea id="public-key-textarea" class="public-textarea"></textarea>
+                    <h1 class="text-keys">Public-Keys</h1>
+                </div>
+                <div class="private-key">
+                    <textarea id="private-key-textarea"></textarea>
+                    <h1 class="text-keys">Private Keys</h1>
+                </div>
+            </div>
+            <button id="generate">Generate Keys</button>
+        </div> -->
+        <!-- <div class="asym-form-layout">
+            <div class="asym-encrypt">
+                <form class="form-asym-encrypt" id="asym-encrypt">
+                    <input type="text" id="asym-encrypt-text" placeholder="Plain Text">
+                    <input type="text" id="asym-encrypt-key" placeholder="Public Keys">
+                    <h1 class="text-encrypted-output">Encrypted Output</h1>
+                    <textarea id="asym-encrypted-textarea" placeholder=""></textarea>
+                    <button type="submit">Encrypt</button>
+                </form>
+            </div>
+    
+            <div class="asym-decrypt">
+                <form class="form-asym-decrypt" id="asym-decrypt">
+                    <input type="text" id="asym-decrypt-text" placeholder="Encrypted Text">
+                    <input type="text" id="asym-decrypt-key" placeholder="Private Keys">
+                    <h1 class="asym-decrypted-output">Decrypted Output</h1>
+                    <textarea id="asym-decrypted-textarea" placeholder=""></textarea>
+                    <button type="submit">Decrypt</button>
+                </form>
+            </div>
+        </div>
+    </div> -->
+
+   
+    <script src="/js/symmetric.js"></script>
+    <script src="/js/random-character.js"></script>
+</body>
+
+</html>
