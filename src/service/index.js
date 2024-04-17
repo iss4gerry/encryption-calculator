@@ -1,1 +1,1 @@
-module.exports.symmetricService = require('./symmetric-service')
+module.exports.appService = require('./service')

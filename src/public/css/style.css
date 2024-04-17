@@ -103,6 +103,7 @@ textarea {
   width: 100%; /* Menggunakan 100% lebar dari parent element */
   height: 150px; /* Mengatur tinggi menjadi 200px */
   font-size: var(--font-size); /* Menyesuaikan ukuran font */
+  background-color: #ffa580;
   font-family: var(--font-face); /* Menggunakan font yang telah ditentukan */
   margin-bottom: calc(var(--font-size) * 2); /* Memberikan margin bawah */
   border: none; /* Menghapus border */
@@ -146,8 +147,8 @@ button:hover {
 }
 
 .form-toggle button.active {
-  background-color: #2A293E;
-  color: #fff;
+  background-color: #ffa580;
+  color: #2A293E;
 }
 
 .form-symmetric {
